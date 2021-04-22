@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  padding: 60px 80px;
+}
+
+.navbar {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px 80px;
+
+  background: #f7f8fc;
+}
+
+.contentNavBar {
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin-top: 48px;
+}
+
+.textContent h3 {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 41px;
+  height: 39px;
+}
+
+.showContent {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.showContent .mainlyContent {
+  width: 55%;
+}
+
+.showContent .mainlyContent div {
+  margin: 40px 0 40px 0;
+}
+
+.showContent .mainlyContent h3 {
+  font-size: 29px;
+  font-weight: 500;
+
+  color: #0a0a0b;
+
+  margin-bottom: 32px;
+}
+
+.showContent .anchors {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+
+  margin-top: 72px;
+}
+
+.showContent .anchors ul li {
+  margin-top: 35px;
+}
+
+.showContent .anchors ul li a {
+  font-size: 16px;
+  color: #0A0A0B;
+
+  transition: 0s;
+}
+
+.showContent .anchors ul li a:hover {
+  border-bottom: 1px solid #7171cc;
+  color: #7171cc;
+}

@@ -8,7 +8,7 @@ $password = filter_input(INPUT_POST, 'password');
 if (!empty($username) && !empty($password)) {
   auth_login($username, $password);
 
-  header('Location: home.php');
+  header('Location: homepage.php');
 }
 
 ?>
@@ -20,7 +20,7 @@ if (!empty($username) && !empty($password)) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Sistema de Login </title>
+  <title> Login </title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
   <!-- <link rel="stylesheet" href="/styles/css/bulma.min.css" />  -->
   <link rel="stylesheet" type="text/css" href="/styles/css/login.css">
