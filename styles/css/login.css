@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  font-family: 'Open Sans', serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat center/cover url('../../assets/backgorund.png');
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 392px;
+  height: 507px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+}
+
+.contentContainer {
+  width: 312px;
+  height: 354px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid black;
+}
