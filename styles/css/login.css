@@ -1,36 +1,70 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-html,body {
-  font-family: 'Open Sans', serif;
+html,
+body {
+  font-family: "Open Sans", serif;
   font-size: 14px;
   font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 .main {
   width: 100vw;
   height: 100vh;
-  background: no-repeat center/cover url('../../assets/backgorund.png');
+  background: no-repeat center/cover url("../../assets/backgorund.png");
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 38px;
 }
 
 .container {
   width: 392px;
   height: 507px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  border: 1px solid black;
 }
 
-.contentContainer {
+.loginContainer {
+  width: 392px;
+  height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 40px;
+
+  background: #f7f8fc;
+
+  box-shadow: 6px 6px 48px rgba(34, 59, 82, 0.16);
+  border-radius: 8px;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 40px 0px;
+}
+
+.loginContentContainer {
   width: 312px;
   height: 354px;
 
@@ -38,6 +72,222 @@ html,body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  border: 1px solid black;
+.formSection,
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+}
+
+.formSection .password .checkBox {
+  font-size: 14px;
+  color: #0a0a0b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 147px;
+  margin: 16px 0px;
+}
+
+.formSection .password .checkBox .textInside {
+  margin-left: -20px;
+  font-weight: bold;
+}
+
+.formSection {
+  width: 100%;
+  height: 354px;
+  padding: 0px;
+
+  /* flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px; */
+}
+
+.insideForm {
+  width: 100%;
+  height: 251px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+}
+
+.insideForm h3 {
+  margin-bottom: 32px;
+}
+
+.formSection .email {
+  width: 100%;
+  height: 73px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 312px;
+  height: 73px;
+}
+
+.insideForm .textInside {
+  color: #0a0a0b;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  margin-bottom: 5px;
+}
+
+.formSection .email .textInside span,
+.formSection .password .textInside span {
+  width: 7px;
+  height: 17px;
+  left: 44px;
+  top: 0px;
+
+  /* Desktop / Header / H5 */
+
+  font-family: Red Hat Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 17px;
+
+  /* Alert / Danger */
+
+  color: #df6b6b;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 3px;
+}
+
+.formSection .email .emailInput,
+.formSection .password .passwordInput {
+  height: 48px;
+  width: 312px;
+  border-radius: 4px;
+  padding: 12px;
+
+  background: #eeecf5;
+  border: 1px solid #eeecf5;
+}
+
+.loginSection {
+  width: 100%;
+  height: 71px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 32px 0px;
+}
+
+.loginSection .submit {
+  width: 312px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+
+  font-size: 14px;
+  color: #fafafc;
+  background: #0a0a0b;
+
+  cursor: pointer;
+}
+
+.loginSection div a {
+  font-size: 12px;
+  font-weight: bold;
+  color: #0a0a0b;
+
+  display: flex;
+  margin-top: 16px;
+}
+
+.signupSection {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-align: center;
+
+  color: #0a0a0b;
+}
+
+/* The container */
+.checkBox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkBox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBox input:checked ~ .checkmark {
+  background-color: black;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox .checkmark:after {
+  left: 33%;
+  top: 12%;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

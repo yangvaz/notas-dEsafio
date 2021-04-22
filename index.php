@@ -30,23 +30,49 @@ if (!empty($username) && !empty($password)) {
 <body>
   <div class="main">
     <div class="container">
-      <div class="contentContainer">
-        <h3>Sistema de Login</h3>
-        <form method="POST">
-          <div class="field">
-            <div class="control">
-              <input name="username" type="text" class="input is-large" placeholder="Seu usuário" autofocus="">
-            </div>
-          </div>
+      <img src="/assets/logo.png" alt="logo" class="logo" />
+      <div class="loginContainer">
+        <div class="loginContentContainer">
 
-          <div class="field">
-            <div class="control">
-              <input name="password" type="password" class="input is-large" placeholder="Sua senha">
+          <div class="formSection">
+            <div class="insideForm">
+              <h3>Informe seus dados</h3>
+              <form method="POST">
+
+                <div class="email">
+                  <div class="textInside">
+                    Email <span> * </span>
+                  </div>
+                  <input name="username" type="text" class="emailInput" autofocus="">
+                </div>
+
+                <div class="password">
+                  <div class="textInside">
+                    Senha <span> * </span>
+                  </div>
+                  <input name="password" type="password" class="passwordInput">
+                  <label class="checkBox">
+                    <input type="checkbox" checked="checked"> <span class="checkmark"> </span> </input>
+                    <span class="textInside"> manter conectado </span>
+                  </label>
+                </div>
             </div>
+
+            <div class="loginSection">
+              <button type="submit" class="submit">Entrar</button>
+              <div> <a href=""> Usar sign-on único (SSO) </a> </div>
+            </div>
+
           </div>
-          <button type="submit" class="button is-block is-link is-large is-fullwidth">Entrar</button>
-        </form>
+          </form>
+
+        </div>
       </div>
+
+      <section class="signupSection">
+        <a href=""> Não possui uma conta? <b> Criar uma conta </b> </a>
+      </section>
+
     </div>
   </div>
 
